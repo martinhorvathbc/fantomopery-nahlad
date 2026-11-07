@@ -6,24 +6,24 @@
 @font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/bodoni-moda-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
 @font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/bodoni-moda-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/cormorant-garamond-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
-@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-400-normal.woff2?v=zk1) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
-@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-500-normal.woff2?v=zk1) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
 @font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:300;font-display:swap;src:url(../fonts/cormorant-garamond-latin-300-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
-@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:300;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-300-italic.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:300;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-300-italic.woff2?v=zk1) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
 @font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url(../fonts/cormorant-garamond-latin-400-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
-@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-400-italic.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-400-italic.woff2?v=zk1) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
 @font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/inter-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
 @font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/inter-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
 @font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/inter-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
 @font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/inter-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
 
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:300;font-display:swap;src:url(../fonts/cormorant-garamond-latin-300-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
-@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:300;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-300-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:300;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-300-normal.woff2?v=zk1) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
 @font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url(../fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
-@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-500-italic.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-500-italic.woff2?v=zk1) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
 @font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
-@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-600-normal.woff2?v=zk1) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113}
 
 :root{
  --ink:#030206;--ink2:#08060b;--ink3:#100b10;
@@ -726,3 +726,42 @@ body{background:radial-gradient(ellipse 120% 60% at 50% 0%,#0a0710 0%,var(--ink)
 /* sekcia Vypredané: dlhší nadpis „Jedna premiéra. Jedna repríza.“ */
 .sold .mega{font-size:clamp(3.4rem,11.2vw,11.4rem);line-height:.9}
 @media (max-width:760px){.sold .mega{font-size:clamp(3rem,16vw,5.4rem)}}
+
+/* ===== 7. 11. 2026 – korektúry Zuzany Maťusovej ===== */
+/* Véronique navrch a zvýraznená */
+.oh-q{grid-template-columns:repeat(2,minmax(0,1fr))}
+.oh-q .oh-pin{grid-column:1/-1;padding:34px 0 8px;border-top:2px solid var(--gold)}
+.oh-q .oh-pin blockquote p{font-size:clamp(1.9rem,1.2rem + 2.3vw,3.5rem);line-height:1.12;max-width:26ch}
+.oh-q .oh-pin .oh-who{font-size:1.15rem}
+.oh-flag{font-style:normal;color:var(--bone);border:1px solid var(--gline);padding:3px 9px;letter-spacing:.2em}
+@media (max-width:980px){.oh-q{grid-template-columns:1fr}}
+/* kredity: partneri a epilóg */
+.kr-pairs{display:flex;flex-direction:column;gap:.55rem}
+.kr-pair{display:block;line-height:1.2}
+.kr-pair i{display:block;font-family:var(--kr-sans,Inter,sans-serif);font-style:normal;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--kr-dim,rgba(244,236,223,.55));margin-bottom:.15rem}
+.kr-pair b{font-weight:500;color:var(--kr-ink,#f4ecdf);font-size:1.12em}
+.kr-pairs .kr-note{margin-top:.4rem}
+@media (max-width:640px){.kr-pairs{align-items:center;text-align:center}}
+.slot-cap .slot-pairs{display:flex;flex-wrap:wrap;gap:8px 26px;margin-top:12px;font-family:inherit;letter-spacing:0;text-transform:none}
+.slot-cap .slot-pairs .kr-pair i{font-size:.52rem;color:var(--bone3)}
+.slot-cap .slot-pairs .kr-pair b{display:block;font-family:var(--serif);font-size:1.15rem;color:var(--bone);margin:0}
+.who .kr-inl{display:inline}
+.who .kr-inl i{display:inline;font-size:inherit;letter-spacing:inherit;color:var(--bone3);margin:0}
+.who .kr-inl b{font-family:var(--serif);font-size:1.25em;letter-spacing:0;text-transform:none;font-weight:500;color:var(--bone)}
+/* formulár obhliadky */
+.ob-form{margin:34px auto 0;max-width:880px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 28px;text-align:left}
+.ob-form .f span{display:block;font-family:var(--sans);font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bone3);margin-bottom:6px}
+.ob-form input[type=text]{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(241,232,216,.3);color:var(--bone);font-family:var(--serif);font-size:1.3rem;padding:8px 0 10px;border-radius:0;transition:border-color .3s}
+.ob-form input:focus{outline:none;border-bottom-color:var(--gold)}
+.ob-form input[aria-invalid=true]{border-bottom-color:var(--red)}
+.ob-act{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px}
+.ob-n{margin:0;max-width:52ch;font-family:var(--sans);font-size:.74rem;letter-spacing:.04em;line-height:1.7;color:var(--bone2)}
+.ob-n.err{color:#ff8a96}
+.pon-line{margin-top:34px}
+@media (max-width:760px){.ob-form{grid-template-columns:1fr}.ob-act .btn{width:100%;justify-content:center}}
+.slot-cap{background:linear-gradient(0deg,rgba(5,4,5,.98) 62%,rgba(5,4,5,.9) 80%,transparent)}
+.slot-cap .kr-pair{text-transform:none;letter-spacing:0;margin:0}
+.slot-cap .slot-pairs .kr-pair i{text-transform:uppercase;letter-spacing:.18em}
+.who .kr-inl b{font-size:1.2rem;line-height:1.2}
+.who .kr-inl i{font-size:.6rem}
+.oh-q .oh-pin blockquote p{max-width:32ch}
