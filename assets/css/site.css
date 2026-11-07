@@ -723,3 +723,6 @@ body{background:radial-gradient(ellipse 120% 60% at 50% 0%,#0a0710 0%,var(--ink)
  .hero-act{gap:8px}
  .hero-foot{padding-top:14px}
 }
+/* sekcia Vypredané: dlhší nadpis „Jedna premiéra. Jedna repríza.“ */
+.sold .mega{font-size:clamp(3.4rem,11.2vw,11.4rem);line-height:.9}
+@media (max-width:760px){.sold .mega{font-size:clamp(3rem,16vw,5.4rem)}}
