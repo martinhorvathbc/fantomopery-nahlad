@@ -58,7 +58,7 @@ em{font-style:italic}
 .mega em,.huge em,.big em{font-style:italic;font-weight:300;color:var(--gold);text-shadow:0 0 50px rgba(212,175,116,.22)}
 .lede{font-size:clamp(1.25rem,1.1rem + .8vw,1.85rem);line-height:1.38;color:var(--bone2);max-width:34ch}
 .credit{position:absolute;right:var(--gut);bottom:18px;font-family:var(--sans);font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bone3);z-index:3}
-.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.split .w{display:inline-block;vertical-align:top}
 .split .w>span{display:inline-block;will-change:transform}
 
 /* vrstvy filmu */
@@ -540,3 +540,186 @@ body{background:radial-gradient(ellipse 120% 60% at 50% 0%,#0a0710 0%,var(--ink)
 .offer-slim .contact .lede{margin-bottom:0}
 .offer-slim .contact .lede .mail{display:inline;margin:0}
 .epi-slots{grid-template-columns:minmax(0,820px);justify-content:center}
+
+/* 6. 11. 2026 – ohlasy médií, výrazný zber kontaktov, podpis citátu */
+.cta-r{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.cta-r:hover{background:transparent;color:var(--bone)}
+.bar .cta-r{margin-left:28px}
+.bar .cta-r+.cta-s{margin-left:10px}
+.sold-cta{margin-top:34px}
+.q-who{margin-top:18px;font-family:var(--sans);font-size:.66rem;letter-spacing:.14em;line-height:1.8;color:var(--bone2)}
+.q-who a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.q-who a:hover{color:var(--bone)}
+
+.ohlasy{position:relative;background:var(--ink);padding:16vh var(--gut) 14vh;border-top:1px solid var(--line)}
+.oh-in{max-width:1180px;margin:0 auto}
+.ohlasy .big{margin:18px 0 0;max-width:20ch}
+.ohlasy .big em{color:var(--gold)}
+.oh-q{margin:9vh 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,5vw,80px)}
+.oh-q figure{margin:0;padding-top:26px;border-top:1px solid var(--gline)}
+.oh-q blockquote p{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(1.5rem,1.1rem + 1.4vw,2.5rem);line-height:1.18;color:var(--bone)}
+.oh-q figcaption{margin-top:18px}
+.oh-q figcaption a{font-family:var(--sans);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+.oh-q figcaption a:hover{color:var(--bone)}
+.oh-list{list-style:none;margin:10vh 0 0;padding:0;border-top:1px solid var(--line)}
+.oh-list a{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr) auto;gap:8px 30px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--bone);transition:background .4s}
+.oh-list a:hover{background:linear-gradient(90deg,rgba(212,175,116,.08),transparent)}
+.oh-m{font-family:var(--sans);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);line-height:1.7}
+.oh-t{font-family:var(--serif);font-size:clamp(1.15rem,1rem + .5vw,1.5rem);line-height:1.3}
+.oh-list i{font-style:normal;color:var(--gold);font-size:1.1rem}
+
+.wl{background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(212,175,116,.10),transparent 70%),var(--ink2)}
+.wl .big em{color:var(--gold)}
+.wl-info{grid-column:1/-1;margin:-6px 0 0;font-family:var(--sans);font-size:.74rem;line-height:1.7;color:var(--bone2);max-width:72ch}
+.wl-info a{color:var(--gold)}
+.wl input[aria-invalid=true]{border-bottom-color:var(--red)}
+.wl .msg.err{color:#ff8a96}
+.wl-ok{margin-top:40px;padding:34px 0 8px;border-top:1px solid var(--gline);outline:none}
+.wl-ok[hidden]{display:none}
+.wl-ok-h{font-family:var(--disp);font-size:clamp(2.2rem,4vw,3.6rem);line-height:1;color:var(--gold)}
+.wl-ok p+p{margin-top:14px;color:var(--bone);font-size:1.2rem;max-width:52ch}
+#wlForm[hidden]{display:none}
+
+@media (max-width:980px){
+ .bar .cta-r{margin-left:auto}
+}
+@media (max-width:760px){
+ .bar{gap:10px}
+ .bar .cta-r+.cta-s{margin-left:0}
+ .oh-q{grid-template-columns:1fr}
+ .oh-list a{grid-template-columns:minmax(0,1fr) auto;gap:6px 14px}
+ .oh-m{grid-column:1/-1}
+ .sold-cta{font-size:.6rem;padding:18px 22px;letter-spacing:.2em}
+}
+@media (max-width:380px){
+ .mark{font-size:.92rem}
+ .cta-s{padding:9px 9px;font-size:.5rem;letter-spacing:.14em}
+}
+.nw{white-space:nowrap}
+.contact .lede{margin-bottom:0}
+.contact .mail{display:inline-block;margin:26px auto 54px;padding:16px 26px;border:1px solid var(--gline);font-size:clamp(1.15rem,1rem + 1.6vw,2.2rem);color:var(--bone)}
+.contact .mail:hover{background:rgba(212,175,116,.08)}
+@media (max-width:380px){.contact .mail{padding:14px 14px;font-size:1.05rem}}
+
+/* hero – jedna výzva */
+.hero-act{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.hero-cta{margin-top:6px}
+.hero-alt{font-family:var(--sans);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bone2);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gline)}
+.hero-alt:hover{color:var(--bone)}
+
+/* ponuka pre kupca */
+.pon{padding-bottom:0}
+.pon-in{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:22vh var(--gut) 14vh}
+.pon .huge{margin:20px 0 30px}
+.pon .lede{max-width:44ch;color:var(--bone)}
+.pon-grid{margin-top:10vh;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(30px,6vw,96px)}
+.pon-h3{font-family:var(--sans);font-weight:500;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);padding-bottom:16px;border-bottom:1px solid var(--gline)}
+.pon-list,.pon-steps{list-style:none;margin:0;padding:0}
+.pon-list li,.pon-steps li{padding:18px 0;border-bottom:1px solid var(--line)}
+.pon-list b,.pon-steps b{display:block;font-family:var(--disp);font-weight:400;font-size:clamp(1.35rem,1.1rem + .9vw,1.9rem);line-height:1.1;color:var(--bone)}
+.pon-list span,.pon-steps span{display:block;margin-top:6px;font-size:1.05rem;line-height:1.5;color:var(--bone2)}
+.pon-steps{counter-reset:k}
+.pon-steps li{counter-increment:k;display:grid;grid-template-columns:2.4rem minmax(0,1fr);column-gap:10px}
+.pon-steps li:before{content:counter(k);grid-row:1 / span 2;font-family:var(--disp);font-size:1.9rem;line-height:1;color:var(--gold)}
+.pon-steps b,.pon-steps span{grid-column:2}
+.pon-year{margin-top:9vh;font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,1rem + 1.2vw,2.1rem);color:var(--bone2);text-align:center}
+.pon-contact{margin-top:8vh;text-align:center}
+.pon-who{font-family:var(--disp);font-size:clamp(1.5rem,1.1rem + 1.6vw,2.6rem);line-height:1.15;color:var(--bone)}
+.pon .mail{display:inline-block;margin:24px auto 0;padding:16px 26px;border:1px solid var(--gline);font-size:clamp(1.15rem,1rem + 1.6vw,2.2rem);color:var(--bone)}
+.pon .mail:hover{background:rgba(212,175,116,.08)}
+.pon-firm{margin-top:22px;font-family:var(--sans);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bone3)}
+@media (max-width:760px){
+ .pon-grid{grid-template-columns:1fr}
+ .pon-in{padding-top:16vh}
+ .hero-cta{font-size:.6rem;padding:16px 20px;letter-spacing:.2em}
+}
+@media (max-width:380px){.pon .mail{padding:14px 12px;font-size:1.02rem}}
+
+/* ===== 6. 11. 2026 – predajná verzia: hostiteľ / producent ===== */
+.sold-act{display:flex;flex-direction:column;align-items:flex-start;gap:18px;margin-top:34px;margin-left:auto;margin-right:6vw;max-width:44ch}
+.sold-act .sold-cta{margin-top:0}
+@media (max-width:760px){.sold-act{margin-left:0;margin-right:0}}
+
+.oh-lede{margin:22px 0 0;max-width:52ch;font-size:clamp(1.15rem,1rem + .6vw,1.5rem);line-height:1.45;color:var(--bone2)}
+.oh-q{margin:8vh 0 0;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(26px,3.4vw,56px)}
+.oh-q figure{display:flex;flex-direction:column;padding-top:22px}
+.oh-q blockquote{margin:18px 0 0}
+.oh-q blockquote p{font-size:clamp(1.35rem,1rem + 1vw,2.05rem);line-height:1.2}
+.oh-src{display:flex;flex-wrap:wrap;gap:4px 14px;margin:0;font-family:var(--sans);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.oh-who{margin:18px 0 0;font-size:1.02rem;line-height:1.5;color:var(--bone2)}
+.oh-go{margin-top:auto;padding-top:22px;font-family:var(--sans);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--bone);text-decoration:none;border-bottom:0}
+.oh-go i{font-style:normal;color:var(--gold);margin-left:6px}
+.oh-go:hover{color:var(--gold)}
+.oh-more{margin:10vh 0 0;font-family:var(--sans);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--bone3)}
+.oh-more+.oh-list{margin-top:18px}
+.oh-cta{margin-top:12vh;text-align:center;display:flex;flex-direction:column;align-items:center;gap:26px}
+.oh-cta p{font-family:var(--disp);font-size:clamp(1.8rem,1.2rem + 2.4vw,3.4rem);line-height:1.1;color:var(--bone)}
+.oh-cta em{color:var(--gold)}
+@media (max-width:980px){.oh-q{grid-template-columns:1fr}}
+
+.z3-note a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(239,230,214,.4);white-space:nowrap}
+.z3-note a:hover{color:var(--bone)}
+
+.pon-gain{list-style:none;margin:9vh 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,64px)}
+.pon-gain li{padding-top:20px;border-top:1px solid var(--gline)}
+.pon-gain b{display:block;font-family:var(--disp);font-weight:400;font-size:clamp(1.4rem,1.1rem + .9vw,1.95rem);line-height:1.12;color:var(--bone)}
+.pon-gain span{display:block;margin-top:10px;font-size:1.05rem;line-height:1.5;color:var(--bone2)}
+@media (max-width:860px){.pon-gain{grid-template-columns:1fr;gap:26px}.pon-gain{margin-top:7vh}}
+.pon-grid{margin-top:9vh}
+.pon-contact{margin-top:10vh;padding:clamp(28px,5vw,64px) var(--gut);border:1px solid var(--gline);background:rgba(3,2,6,.55);text-align:center}
+.pon-k{font-family:var(--sans);font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.pon-contact .pon-who{margin-top:14px}
+.pon-line{margin-top:26px;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:8px 14px;font-family:var(--disp);font-size:clamp(1.15rem,.9rem + 1.5vw,2rem);line-height:1.2;color:var(--bone)}
+.pon-line .nw{white-space:nowrap}
+.pon-contact .mail{display:inline-block;margin:0;padding:12px 20px;font-size:inherit;font-style:italic;font-family:var(--serif);border:1px solid var(--gline);color:var(--bone);white-space:nowrap}
+.pon-contact .mail .nw{white-space:nowrap}
+.pon-note{margin-top:24px;font-family:var(--sans);font-size:.66rem;letter-spacing:.14em;line-height:1.8;text-transform:uppercase;color:var(--bone3)}
+@media (max-width:420px){.pon-contact .mail{padding:10px 12px;font-size:.98rem}.pon-line{font-size:1.1rem}}
+@media (max-width:340px){.pon-contact .mail{font-size:.9rem;padding:9px 8px}}
+@media (min-width:981px) and (max-width:1220px){.chap{display:none}.bar .cta-r{margin-left:auto}}
+
+/* ===== 7. 11. 2026 – pohľad hostiteľa: prvá obrazovka, ponuka, tempo ===== */
+.hero-sub{font-family:var(--serif);font-weight:400;font-size:clamp(1.12rem,.95rem + .75vw,1.55rem);line-height:1.32;color:var(--bone);max-width:30ch;margin-top:-4px}
+.pon-act{margin-top:38px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.pon-act .btn{white-space:nowrap}
+.pon-act-n{max-width:46ch;font-family:var(--sans);font-size:.74rem;letter-spacing:.06em;line-height:1.7;color:var(--bone2)}
+.pon-gain{margin-top:11vh}
+.foot-ask{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px;padding:0 0 9vh;margin-bottom:9vh;border-bottom:1px solid var(--line)}
+.foot-ask p{font-family:var(--disp);font-size:clamp(2rem,1.2rem + 3vw,4rem);line-height:1;letter-spacing:-.02em;color:var(--bone)}
+.foot-ask em{color:var(--gold)}
+/* tempo: kapitolové karty a úvodné plochy bez prázdnych obrazoviek */
+.ch-card{min-height:68vh;min-height:68svh;padding-top:12vh;padding-bottom:8vh}
+.sold{min-height:100vh;min-height:100svh}
+.pon-in{padding-top:16vh;padding-bottom:12vh}
+.chapter{padding-bottom:10vh}
+.pull{padding-bottom:9vh}
+.quotes{margin-top:11vh;gap:9vh}
+.press{margin-top:11vh}
+.paris{margin-top:10vh}
+@media (max-width:760px){
+ .hero-sub{font-size:1.08rem;max-width:26ch}
+ .pon-act .btn.btn-xl{font-size:.62rem;padding:20px 22px;letter-spacing:.2em}
+ .ch-card{min-height:60svh}
+}
+.hero-act{gap:12px}
+.hero-btns{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:6px}
+.hero-btns .hero-cta{margin-top:0}
+.hero-alt{line-height:1.7}
+.title .t1{font-size:clamp(6rem,min(27vw,40vh),28rem)}
+.title .t2{font-size:clamp(2.3rem,min(7.6vw,11vh),8rem)}
+@media (max-width:760px){.title .t1{font-size:29vw}.title .t2{font-size:clamp(1.9rem,9.4vw,3.4rem)}.hero-btns{gap:12px}}
+.sold-act{font-size:clamp(1.15rem,1rem + .6vw,1.6rem)}
+.sold-sub,.lede,.ch-meta,.oh-lede,.pon-gain span{text-wrap:pretty}
+.review-pill{position:absolute;left:0;right:0;top:4px;z-index:300;text-align:center;font-family:Inter,system-ui,sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(212,175,116,.9);pointer-events:none}
+.review-note{grid-column:1/-1;margin:0;font-family:var(--sans);font-size:.74rem;line-height:1.6;color:var(--gold);border:1px dashed rgba(212,175,116,.6);padding:10px 14px}
+/* nižšie okná (notebooky 1366×768): kompaktnejšia prvá obrazovka */
+@media (min-width:761px) and (max-height:820px){
+ .hero{padding-top:84px}
+ .title .t1{font-size:clamp(5rem,min(24vw,32vh),22rem)}
+ .title .t2{font-size:clamp(2rem,min(6.4vw,8.4vh),6rem)}
+ .kicker{margin-bottom:8px}
+ .claim{font-size:clamp(1.5rem,2.4vw,2.1rem)}
+ .hero-sub{font-size:1.08rem;margin-top:-6px}
+ .hero-act{gap:8px}
+ .hero-foot{padding-top:14px}
+}
