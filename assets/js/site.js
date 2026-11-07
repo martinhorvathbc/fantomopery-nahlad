@@ -49,36 +49,24 @@
     });
   }
 
-  /* ---------- formulár záujemcov: rovnaký endpoint a rovnaké polia ako doterajší web (sender) ---------- */
+  /* ---------- formulár (rovnaký endpoint a polia ako živý web) ---------- */
   (function () {
-    var f = $("#wlForm"), m = $("#wlMsg"), b = $("#wlBtn"), ok = $("#wlOk"); if (!f) return;
-    var t0 = Date.now();
-    var ERR = "Odoslanie sa nepodarilo. Skúste to prosím ešte raz, alebo napíšte na william@brandconsulting.sk.";
-    function say(t, err) { m.textContent = t; m.className = "msg" + (err ? " err" : ""); }
-    function mark(id, bad) { var el = d.getElementById(id); if (el) { el.setAttribute("aria-invalid", bad ? "true" : "false"); if (bad) el.focus(); } }
-    function done(dup) {
-      f.hidden = true; say("");
-      if (ok) {
-        $("#wlOkT", ok).textContent = dup ? "Váš kontakt už máme. Dáme vám vedieť, keď ohlásime ďalší termín." : "Ďakujeme. Keď ohlásime ďalší termín, napíšeme vám ako prvým.";
-        ok.hidden = false; ok.setAttribute("tabindex", "-1"); ok.focus();
-      }
-    }
+    var f = $("#wlForm"), m = $("#wlMsg"), b = $("#wlBtn"); if (!f) return;
+    function say(t) { m.textContent = t; }
+    var ERR = "Odoslanie sa nepodarilo. Napíšte nám prosím na william@brandconsulting.sk.";
     f.addEventListener("submit", function (e) {
       e.preventDefault();
       function v(id) { return (d.getElementById(id).value || "").trim(); }
       var name = v("wlName"), surname = v("wlSurname"), email = v("wlEmail"), phone = v("wlPhone"), hp = (f.querySelector("input[name=website]").value || "").trim();
-      ["wlName", "wlSurname", "wlEmail"].forEach(function (id) { mark(id, false); });
-      if (name.length < 2) { mark("wlName", true); return say("Prosím, vyplňte meno.", true); }
-      if (surname.length < 2) { mark("wlSurname", true); return say("Prosím, vyplňte priezvisko.", true); }
-      if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)) { mark("wlEmail", true); return say("Prosím, skontrolujte e-mail.", true); }
-      if (!d.getElementById("wlConsent").checked) { d.getElementById("wlConsent").focus(); return say("Prosím, potvrďte súhlas.", true); }
-      /* ochrana proti robotom bez otravovania: skryté pole + príliš rýchle odoslanie (robot) – tvárime sa, že prešlo */
-      if (hp || Date.now() - t0 < 2500) { done(false); return; }
+      if (name.length < 2) return say("Prosím, vyplňte meno.");
+      if (surname.length < 2) return say("Prosím, vyplňte priezvisko.");
+      if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email)) return say("Prosím, skontrolujte e-mail.");
+      if (!d.getElementById("wlConsent").checked) return say("Prosím, potvrďte súhlas.");
       b.disabled = true; say("Odosielam…");
-      fetch("/waitlist/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name: name, surname: surname, phone: phone, email: email, consent: true, consent_text: ((d.querySelector("label.c span")||{}).textContent||"").trim(), consent_ver: f.getAttribute("data-suhlas") || "", source: "web fantomopery.sk", website: hp, lang: "sk" }) })
+      fetch("/waitlist/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name: name, surname: surname, phone: phone, email: email, consent: true, website: hp, lang: "sk" }) })
         .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
-        .then(function (dd) { if (dd && dd.ok) done(!!dd.dup); else { say(ERR, true); b.disabled = false; } })
-        .catch(function () { say(ERR, true); b.disabled = false; });
+        .then(function (dd) { if (dd && dd.ok) { say(dd.dup ? "Váš kontakt už máme. Ďakujeme." : "Ďakujeme. Dáme vám vedieť o ďalších termínoch."); f.style.display = "none"; } else { say(ERR); b.disabled = false; } })
+        .catch(function () { say(ERR); b.disabled = false; });
     });
     var c = $("#copyLink");
     if (c) c.addEventListener("click", function (e) { e.preventDefault(); try { navigator.clipboard.writeText("https://www.fantomopery.sk/"); c.textContent = "Skopírované"; } catch (x) {} });
@@ -224,11 +212,9 @@
   /* odhalenie nadpisov po slovách */
   $$(".split").forEach(function (el) {
     splitWords(el);
-    /* bez orezávajúcej masky: overflow:hidden strihalo diakritiku a pri rýchlom scrolle ostala vidno len polovica písmen.
-       Slová sa len rozsvietia a mierne zdvihnú, v každom okamihu sú celé. */
-    gsap.fromTo($$(".w > span", el), { autoAlpha: 0, y: "0.3em" }, {
-      autoAlpha: 1, y: 0, duration: 0.8, ease: "power3.out", stagger: 0.045, clearProps: "transform",
-      scrollTrigger: { trigger: el, start: "top 125%", once: true }
+    gsap.fromTo($$(".w > span", el), { yPercent: 115, rotate: 3 }, {
+      yPercent: 0, rotate: 0, duration: 1.4, ease: "expo.out", stagger: 0.07,
+      scrollTrigger: { trigger: el, start: "top 86%" }
     });
   });
 
@@ -283,8 +269,8 @@
     if (meta) gsap.from(meta, { opacity: 0, y: 30, duration: 1.2, ease: "power3.out", scrollTrigger: { trigger: meta, start: "top 90%" } });
   });
 
-  /* I – pás fotografií */
-  if ($(".film-frame")) gsap.fromTo(".film-frame", { clipPath: "inset(18% 14% 18% 14%)" }, { clipPath: "inset(0% 0% 0% 0%)", ease: "none", scrollTrigger: { trigger: ".film", start: "top 92%", end: "top 30%", scrub: true } });
+  /* I – film a pás fotografií */
+  gsap.fromTo(".film-frame", { clipPath: "inset(18% 14% 18% 14%)" }, { clipPath: "inset(0% 0% 0% 0%)", ease: "none", scrollTrigger: { trigger: ".film", start: "top 92%", end: "top 30%", scrub: true } });
   (function () {
     var strip = $("#strip"), track = $(".strip-track"); if (!strip) return;
     function dist() { return Math.max(0, track.scrollWidth - w.innerWidth); }
