@@ -1,0 +1,5 @@
+WEB_STRATEGIA.md
+_nastroje/
+*testdata*
+*.jsonl
+*.bak*
