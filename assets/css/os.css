@@ -1,0 +1,34 @@
+/* Fantóm opery na Zámku – sekcia „Hodina dvadsať za päť minút“ (animovaná os celého predstavenia), 8. 11. 2026.
+   Os (timeline.css, timeline.js) je z LEROUX100; tento súbor ju len osadzuje do štýlu Fantóma: čierna plocha, zlatá, Cormorant. */
+.os{position:relative;background:var(--ink);padding:clamp(5rem,12vw,11rem) 0 clamp(4.5rem,10vw,9rem);overflow:hidden}
+.os:before{content:"";position:absolute;left:50%;top:0;width:1px;height:clamp(48px,9vw,110px);background:linear-gradient(180deg,transparent,rgba(212,175,116,.7));transform:translateX(-50%)}
+.os-in{position:relative;width:100%;max-width:1440px;margin:0 auto;padding:0 var(--gut)}
+.os-head{max-width:62rem;margin:0 0 clamp(2rem,4.5vw,3.6rem)}
+.os-head .big{margin:1.1rem 0 1.4rem}
+.os-lede{font-size:clamp(1.15rem,1.05rem + .5vw,1.5rem);line-height:1.45;color:var(--bone2);max-width:44rem}
+/* os sama: tmavšia, bez vlastného nadpisu (ten je v .os-head) */
+.os .tla{margin-top:0}
+.os .tla-stage{box-shadow:inset 0 0 0 5px #0a0605,inset 0 0 0 6px rgba(214,170,92,.2),0 30px 120px rgba(0,0,0,.7),0 0 0 1px rgba(214,170,92,.12)}
+.os .tla-lead{display:none}
+/* záver: posledná veta epilógu, potom výzva */
+.os .tla-end .eb{font-family:var(--sans);font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.os-last{margin:clamp(14px,2.4vw,26px) auto clamp(12px,2vw,22px);max-width:54rem;text-align:center}
+.os-last p{font-family:var(--disp);font-weight:300;font-style:italic;font-size:clamp(1.35rem,3.1vw,2.7rem)!important;line-height:1.16!important;color:var(--t-gold2)!important;max-width:none!important;margin:0!important;text-shadow:0 0 40px rgba(239,204,138,.25)}
+.os-last footer{margin-top:12px;font-family:var(--sans);font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--t-mute)}
+.os .tla-end .ctas{margin-top:clamp(12px,2vw,22px);gap:12px}
+.os .tla-end .btn{font-family:var(--sans)!important;font-weight:500;font-size:.64rem!important;letter-spacing:.28em!important;text-transform:uppercase;padding:17px 26px;border:0!important;border-radius:0!important;text-shadow:none!important;color:var(--ink)!important;
+  background:linear-gradient(180deg,#f4ecdf,#e6d8bf)!important;box-shadow:0 0 0 1px rgba(212,175,116,.5),0 10px 40px rgba(212,175,116,.18)!important}
+.os .tla-end .btn.tla-again{background:transparent!important;color:var(--t-gold2)!important;box-shadow:inset 0 0 0 1px rgba(214,170,92,.55)!important}
+.os .tla-end .btn:hover{filter:brightness(1.08)}
+.os .tla-end .btn.tla-again:hover{background:rgba(214,170,92,.1)!important}
+.os .tla-btn{border:1px solid rgba(214,170,92,.5)}
+@media (max-width:860px){
+  .os-last p{font-size:clamp(1.2rem,5.4vw,1.7rem)!important}
+  .os-last footer{font-size:.54rem;letter-spacing:.18em}
+}
+
+/* pás „Kam patrí hudba“ – päť miest podľa Emy Olnerovej (10. 11. 2026): jeden stĺpec, dlhšie riadky s citátmi */
+.os .tla-mlist{grid-auto-flow:row;grid-template-columns:1fr;grid-template-rows:none;gap:6px 0;max-width:62rem}
+.os .tla-mlist li{padding-left:76px;font-size:17px}
+.os .tla-mlist li b{font-weight:500}
+@media (max-width:860px){.os .tla-mlist li{padding-left:64px;font-size:16px}}

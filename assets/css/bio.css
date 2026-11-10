@@ -1,0 +1,13 @@
+/* Životopisy (vrátené zo starého webu, 8. 11. 2026) – v štýle Fantóma: čierna, zlatá, Cormorant */
+.bio{position:relative;background:var(--ink);padding:clamp(3.5rem,8vw,7rem) 0 clamp(2.5rem,5vw,4rem)}
+.bio-in{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--gut)}
+.bio .label{margin-bottom:clamp(1.6rem,3vw,2.4rem)}
+.bio-h{font-family:var(--disp);font-weight:300;font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.05;letter-spacing:-.01em;color:var(--bone);margin:clamp(2rem,4vw,3.4rem) 0 clamp(1.2rem,2.4vw,2rem);text-wrap:balance}
+.bio-h em{font-style:italic;color:var(--gold)}
+.bio-h:first-of-type{margin-top:0}
+.bio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:clamp(14px,2vw,26px)}
+.bio-card{min-width:0;padding:clamp(1.4rem,2.4vw,2.1rem);border:1px solid rgba(212,175,116,.18);background:linear-gradient(180deg,rgba(20,15,12,.55),rgba(8,6,6,.55))}
+.bio-role{font-family:var(--sans);font-weight:500;font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;line-height:1.7;color:var(--gold);margin:0 0 .8rem}
+.bio-name{font-family:var(--disp);font-style:italic;font-weight:400;font-size:clamp(1.6rem,2.4vw,2.1rem);line-height:1.12;color:var(--bone);margin:0 0 1.1rem}
+.bio-card p:not(.bio-role){font-family:var(--serif);font-size:clamp(1.02rem,.98rem + .2vw,1.14rem);line-height:1.55;color:var(--bone2);margin:0 0 .75em;overflow-wrap:anywhere}
+.bio-card p:last-child{margin-bottom:0}
