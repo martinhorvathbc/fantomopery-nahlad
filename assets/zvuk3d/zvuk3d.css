@@ -10,17 +10,17 @@
 .z3:before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
   background:linear-gradient(90deg,rgba(3,2,6,.88) 0%,rgba(3,2,6,.55) 30%,rgba(3,2,6,0) 58%),linear-gradient(0deg,rgba(3,2,6,.9) 0%,rgba(3,2,6,0) 30%),linear-gradient(180deg,rgba(3,2,6,.85) 0%,rgba(3,2,6,0) 16%)}
 .z3-copy{position:absolute;z-index:3;left:clamp(20px,6vw,96px);top:50%;transform:translateY(-50%);max-width:min(520px,44vw)}
-.z3-eyebrow{font-family:var(--z3-sans,'Inter',system-ui,sans-serif);font-size:.68rem;letter-spacing:.42em;text-transform:uppercase;color:#d4af74;margin:0 0 1.6rem;display:flex;align-items:center;gap:16px}
+.z3-eyebrow{font-family:var(--z3-sans,'Inter',system-ui,sans-serif);font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:#d4af74;margin:0 0 1.6rem;display:flex;align-items:center;gap:16px}
 .z3-eyebrow:before{content:"";width:44px;height:1px;background:#d4af74;opacity:.8}
 .z3-title{font-family:var(--z3-serif,'Cormorant Garamond','Times New Roman',serif);font-weight:400;font-size:clamp(2.6rem,6.2vw,5.6rem);line-height:.96;letter-spacing:-.01em;margin:0 0 1.6rem;color:#f4ecdf}
 .z3-title em{font-style:italic;color:#d4af74;display:block}
 .z3-lede{font-family:var(--z3-serif,'Cormorant Garamond','Times New Roman',serif);font-size:clamp(1.12rem,1.5vw,1.35rem);line-height:1.5;color:rgba(239,230,214,.82);margin:0;max-width:30em}
 .z3-spec{position:absolute;z-index:3;left:clamp(20px,6vw,96px);right:clamp(20px,6vw,96px);bottom:clamp(54px,8vh,86px);display:flex;flex-wrap:wrap;gap:14px 0;list-style:none;margin:0;padding:0;border-top:1px solid rgba(212,175,116,.28)}
-.z3-spec li{flex:1 1 0;min-width:120px;padding:18px 18px 0 0;font-family:var(--z3-sans,'Inter',system-ui,sans-serif);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(239,230,214,.6);line-height:1.5}
+.z3-spec li{flex:1 1 0;min-width:120px;padding:18px 18px 0 0;font-family:var(--z3-sans,'Inter',system-ui,sans-serif);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(239,230,214,.6);line-height:1.5}
 .z3-spec b{display:block;font-family:var(--z3-serif,'Cormorant Garamond','Times New Roman',serif);font-weight:400;font-size:clamp(1.7rem,2.6vw,2.4rem);letter-spacing:0;text-transform:none;color:#f4ecdf;margin-bottom:.35rem;line-height:1}
 .z3-spec li:nth-child(4) b{color:#ff3347}
 .z3-spec li:nth-child(5) b{color:#ffb36b}
-.z3-note{position:absolute;z-index:3;left:clamp(20px,6vw,96px);bottom:clamp(18px,3vh,30px);margin:0;font-family:var(--z3-sans,'Inter',system-ui,sans-serif);font-size:.62rem;letter-spacing:.16em;color:rgba(239,230,214,.42)}
+.z3-note{position:absolute;z-index:3;left:clamp(20px,6vw,96px);bottom:clamp(18px,3vh,30px);margin:0;font-family:var(--z3-sans,'Inter',system-ui,sans-serif);font-size:11px;letter-spacing:.16em;color:rgba(239,230,214,.42)}
 .z3-copy>*{opacity:0;transform:translateY(24px);transition:opacity 1.4s cubic-bezier(.2,.7,.2,1),transform 1.4s cubic-bezier(.2,.7,.2,1)}
 .z3-in .z3-copy>*{opacity:1;transform:none}
 .z3-in .z3-copy>:nth-child(2){transition-delay:.18s}.z3-in .z3-copy>:nth-child(3){transition-delay:.36s}

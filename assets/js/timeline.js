@@ -16,7 +16,7 @@
   var MODES=["voix","pic","narr","direct","special","music"];
 
   function Ring(svg){
-    var C=120,RS=104,n=12,i;
+    var C=120,RS=104,n=13,i;
     var halos=qa(svg,".r-halo"),spl=qa(svg,".r-spl"),rays=qa(svg,".r-ray"),gh=qa(svg,".r-gh"),src=q(svg,".r-src"),
         pul=qa(svg,".r-pul"),cv=qa(svg,".r-cv"),acts=qa(svg,".r-act"),stops=qa(svg,".r-c0,.r-c1,.r-c2");
     var I=[],ang=[];for(i=0;i<n;i++){I.push(0);ang.push(PI2*i/n-Math.PI/2)}

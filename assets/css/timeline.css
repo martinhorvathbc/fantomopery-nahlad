@@ -24,7 +24,7 @@
 .tla-ring{width:100%;max-width:400px;height:auto;display:block;overflow:visible}
 .tla-st{margin-top:6px;font-family:Inter,system-ui,sans-serif;font-size:12px;line-height:1.5;color:var(--t-mute);text-align:center;min-height:3.2em}
 .tla-st>span{display:block}
-.tla-st em{font-style:normal;letter-spacing:.24em;text-transform:uppercase;color:var(--t-gold);font-size:10.5px;margin-right:6px}
+.tla-st em{font-style:normal;letter-spacing:.24em;text-transform:uppercase;color:var(--t-gold);font-size:11px;margin-right:6px}
 .tla-st span span{color:var(--t-ink);transition:opacity .4s}
 /* pôdorys: reproduktory, diváci, herci, plátna; pohyb zvuku kreslí timeline.js */
 .tla-ring .r-bg{fill:url(#tla-bg)}
@@ -40,7 +40,7 @@
 .tla-ring .r-src,.tla-ring .r-gh{fill:url(#tla-halo);opacity:0}
 .tla-ring .r-pul,.tla-ring .r-cv{fill:none;stroke:var(--t-cream);stroke-width:1;opacity:0}
 .tla-ring .r-cv{stroke:var(--t-red2)}
-.tla-ring .r-lab{font-family:Inter,system-ui,sans-serif;font-size:7px;letter-spacing:.2em;fill:#8a7a62;text-transform:uppercase}
+.tla-ring .r-lab{font-family:Inter,system-ui,sans-serif;font-size:11px;letter-spacing:.2em;fill:#8a7a62;text-transform:uppercase}
 .tla.is-static .r-halo{opacity:.35}.tla.is-static .r-spl{opacity:.4}
 /* farba plátien v pôdoryse */
 .tla .r-scr{fill:var(--sc,#3a2a1c)}
@@ -57,7 +57,7 @@
 .tla-grid{display:grid;grid-template-columns:var(--lab) minmax(0,1fr);column-gap:var(--cg);row-gap:5px;position:relative}
 .tla-lab{font-family:Inter,system-ui,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--t-mute);line-height:1.15;display:flex;flex-direction:column;justify-content:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tla-lab .s{display:none}
-.tla-lab small{font-size:10.5px;letter-spacing:.04em;text-transform:none;color:var(--t-dim);margin-top:2px;font-style:italic}
+.tla-lab small{font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--t-dim);margin-top:2px;font-style:italic}
 .tla-lab-a{letter-spacing:.04em;text-transform:none;font-size:12.5px;color:var(--t-ink);font-family:"Cormorant Garamond",Georgia,serif;font-size:15.5px}
 .tla-lab-a1,.tla-act1{margin-top:6px}
 .tla-lane{position:relative;height:16px;border-bottom:1px solid rgba(214,170,92,.12)}
@@ -113,7 +113,7 @@
 .tla.is-anim .tla-ph{display:block}
 .tla-ticks-row{display:grid;grid-template-columns:var(--lab) minmax(0,1fr);column-gap:var(--cg);margin-top:6px}
 .tla-ticks{position:relative;height:16px}
-.tla-tick{position:absolute;top:0;transform:translateX(-1px);font-family:Inter,system-ui,sans-serif;font-size:10.5px;letter-spacing:.06em;color:var(--t-dim);white-space:nowrap;border-left:1px solid #4a3626;padding-left:4px;line-height:14px}
+.tla-tick{position:absolute;top:0;transform:translateX(-1px);font-family:Inter,system-ui,sans-serif;font-size:11px;letter-spacing:.06em;color:var(--t-dim);white-space:nowrap;border-left:1px solid #4a3626;padding-left:4px;line-height:14px}
 .tla-tick-end{transform:translateX(-100%);border-left:0;border-right:1px solid #4a3626;padding:0 4px 0 0;color:var(--t-mute)}
 /* ovládanie */
 .tla-ctl{display:none;align-items:center;gap:12px;margin-top:14px}
@@ -161,19 +161,19 @@
   .tla-ring{max-width:330px}
   .tla-st{font-size:11px;min-height:3.2em}
   .tla-grid{row-gap:4px}
-  .tla-lab{font-size:9.5px;letter-spacing:.1em}
+  .tla-lab{font-size:11px;letter-spacing:.1em}
     .tla-lab small{display:none}
   .tla-lab .l{display:none}.tla-lab .s{display:inline}
   .tla-lab-a{font-size:13.5px;letter-spacing:0}
   .tla-pseg .l{display:none}.tla-pseg .s{display:inline}
   .tla-pseg{padding-left:2px}
   .tla-pseg b{font-size:12.5px}
-  .tla-tick{font-size:9.5px;padding-left:2px;letter-spacing:0}
+  .tla-tick{font-size:11px;padding-left:2px;letter-spacing:0}
   .tla-tick:nth-child(even):not(.tla-tick-end){visibility:hidden}
   .tla-stats li{padding:0 12px;min-width:0;flex:1 1 30%}
   .tla-stats li:nth-child(4){border-left:0}
   .tla-stats b{font-size:30px}
-  .tla-stats span{font-size:9.5px;letter-spacing:.12em}
+  .tla-stats span{font-size:11px;letter-spacing:.12em}
   .tla.is-anim .tla-end{padding:16px 12px}
   .tla-end p{font-size:17px}
   .tla-end .ctas{flex-direction:column;width:100%;max-width:340px}
@@ -183,7 +183,7 @@
   .tla-sec{--lab:74px}
   .tla-ring{max-width:300px}
   .tla-tc{font-size:36px}
-  .tla-lab{font-size:9px;letter-spacing:.06em}
+  .tla-lab{font-size:11px;letter-spacing:.06em}
   .tla-lab-a{font-size:12.5px}
   .tla-cap{font-size:17px}
 }

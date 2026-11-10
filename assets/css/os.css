@@ -51,3 +51,10 @@
 
 /* kredit epilógu na mobile: každá dvojica (úloha a meno) na vlastnom riadku, aby sa „hudba“ nelepila na meno */
 @media (max-width:860px){.who .kr-pair{display:block;margin:.55em 0}}
+.epi-slots[hidden]{display:none!important}
+.kr-note[hidden]{display:none!important}
+
+/* náhľadová páska (len na náhľade, v ostrom balíku nie je): jeden riadok aj na mobile */
+@media (max-width:480px){.review-pill{letter-spacing:.08em;font-size:11px}}
+.epi-lines:has(+ .epi-slots[hidden]){padding-bottom:9vh}
+.epi-lines:has(+ .epi-slots[hidden]) .el:nth-last-child(2){margin-bottom:7vh}
