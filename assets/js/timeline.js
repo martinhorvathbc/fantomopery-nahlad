@@ -157,3 +157,50 @@
   window.__tlainit=init;
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();
+
+/* Fantóm opery: popisky častí v hlavičke osi (Martin 10. 11. 2026 5.05). Všetky na jednej základnej línii (na mobile dva riadky), bez vodiacich liniek.
+   Prológ doľava na x=0, Prvé a Druhé dejstvo centrované v úseku, Tretie dejstvo nad úsekom (ak presahuje, doľava), Epilóg doprava na koniec osi.
+   Medzi popiskami v riadku vždy aspoň 16 px (nastavené 18); ak sa nezmestia, písmo sa po 0,5 px zmenší. */
+(function(){
+  var GAP=18,RH=23;
+  function layout(root){
+    var lane=root.querySelector(".tla-parts");if(!lane)return;
+    var segs=[].slice.call(lane.querySelectorAll(".tla-pseg"));if(!segs.length)return;
+    var LR=lane.getBoundingClientRect(),W=LR.width,two=window.matchMedia("(max-width:819px)").matches;
+    var base=two?12.5:15,fs=base,it,i,ok;
+    function measure(){return segs.map(function(sg){var l=sg.querySelector("b.l");l.style.left="auto";l.style.right="auto";l.style.transform="none";
+      return {sg:sg,l:l,n:sg.getAttribute("data-n"),s0:sg.getBoundingClientRect().left-LR.left,s1:sg.getBoundingClientRect().right-LR.left,w:l.getBoundingClientRect().width,x:0,row:0}})}
+    for(it=0;it<14;it++){
+      lane.style.setProperty("--pfs",fs+"px");
+      var L=measure(),by={};L.forEach(function(o){by[o.n]=o});
+      var P=by["Prológ"],A=by["Prvé dejstvo"],B=by["Druhé dejstvo"],C=by["Tretie dejstvo"],E=by["Epilóg"];
+      P.x=0;
+      A.x=(A.s0+A.s1)/2-A.w/2;B.x=(B.s0+B.s1)/2-B.w/2;
+      C.x=C.w<=C.s1-C.s0?(C.s0+C.s1)/2-C.w/2:C.s1-C.w;
+      E.x=W-E.w;
+      if(two){P.row=0;C.row=0;A.row=1;B.row=1;E.row=1;if(A.x<0)A.x=0}
+      var rows=two?2:1;
+      // zľava doprava: pohyblivé (Prvé, Druhé) sa odtlačia doprava
+      for(var r=0;r<rows;r++){
+        var row=[P,A,B,C,E].filter(function(o){return o.row===r}),prev=null;
+        row.forEach(function(o){if(prev&&o!==C&&o!==E&&o.x<prev.x+prev.w+GAP)o.x=prev.x+prev.w+GAP;prev=o});
+        // sprava doľava: pohyblivé sa odtlačia doľava, ak narážajú na pevné (Tretie, Epilóg)
+        for(i=row.length-2;i>=0;i--){var a=row[i],n=row[i+1];if(a!==P&&a!==C&&a!==E&&a.x+a.w+GAP>n.x)a.x=n.x-GAP-a.w}
+      }
+      ok=true;
+      for(r=0;r<rows;r++){var rr=[P,A,B,C,E].filter(function(o){return o.row===r});
+        for(i=1;i<rr.length;i++)if(rr[i].x<rr[i-1].x+rr[i-1].w+GAP-.5)ok=false}
+      if(!two&&(A.x+A.w>A.s1-3||A.x<A.s0-1))ok=false;
+      if(!two&&(B.x<B.s0||B.x+B.w>B.s1))ok=false;
+      if(ok||fs<=11)break;
+      fs-=.5;
+    }
+    L.forEach(function(o){var l=o.l;l.style.transform="none";l.style.right="auto";l.style.left=(o.x-o.s0-o.sg.clientLeft)+"px";l.style.top=(o.row*RH)+"px"});
+    lane.style.setProperty("--tt",((two?2:1)*RH-1)+"px");lane.style.height=((two?2:1)*RH+8)+"px";
+  }
+  function all(){[].forEach.call(document.querySelectorAll(".tla"),layout)}
+  var tm=0;function later(){clearTimeout(tm);tm=setTimeout(all,60)}
+  window.addEventListener("resize",later);window.addEventListener("load",all);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(all);
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",all);else all();
+})();

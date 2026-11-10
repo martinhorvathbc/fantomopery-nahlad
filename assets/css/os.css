@@ -33,25 +33,17 @@
 .os .tla-mlist li b{font-weight:500}
 @media (max-width:860px){.os .tla-mlist li{padding-left:64px;font-size:16px}}
 
-/* hlavička osi – názvy častí (Martin 10. 11. 2026 4.59): rovnaká váha, veľkosť a základná línia; každý názov začína pri svojej deliacej čiarke.
-   Úzke časti (Prológ, Tretie dejstvo) majú celý názov nad osou s vodiacou linkou, nie skratku. */
-.os .tla-parts{margin-top:24px;overflow:visible}
-.os .tla-pseg{overflow:visible;padding-left:7px}
-.os .tla-pseg b{font-weight:500;font-size:15px;line-height:22px;letter-spacing:0;text-shadow:none!important}
-.os .tla-pseg.is-on b,.os .tla-pseg.is-now b{color:var(--t-gold2);text-shadow:none!important}
-.os .tla-pseg .l{display:inline!important}
+/* hlavička osi – názvy častí (Martin 10. 11. 2026 5.05): všetkých päť popiskov na jednej základnej línii, rovnaké písmo, veľkosť a farba, bez vodiacich liniek
+   (ostávajú len deliace čiarky dejstiev). Polohu popiskov počíta timeline.js (patch v os_build.py): Prológ na x=0, Prvé a Druhé dejstvo centrované v úseku,
+   Tretie dejstvo nad úsekom (ak presahuje, doľava), Epilóg na koniec osi, medzi popiskami aspoň 16 px. Mobil (do 819 px): dva riadky. */
+.os .tla-parts{margin-top:6px;overflow:visible;height:31px;--pfs:15px;--tt:22px}
+.os .tla-pseg{overflow:visible;padding:0;white-space:nowrap;border-left:0}
+/* deliace čiarky dejstiev: krátke zárezy pod riadkom popiskov, aby neprechádzali cez text */
+.os .tla-pseg:before{content:"";position:absolute;left:0;top:var(--tt,22px);height:9px;border-left:1px solid rgba(214,170,92,.55)}
+.os .tla-pseg[data-n="Prológ"]:before{display:none}
+.os .tla-pseg b{font-weight:500;font-size:var(--pfs,15px);line-height:22px;letter-spacing:0;color:var(--t-gold2)!important;text-shadow:none!important}
 .os .tla-pseg .s{display:none!important}
-.os .tla-pseg.up .l,.os .tla-pseg.up2 .l{display:inline!important}
-.os .tla-pseg.up .l{position:absolute;left:-1px;top:-24px;height:46px;padding-left:7px;line-height:20px;border-left:1px solid rgba(214,170,92,.45);white-space:nowrap}
-@media (max-width:860px){
-  /* mobil: Druhé dejstvo v osi; Prvé dejstvo, Prológ, Tretie dejstvo a Epilóg zdvihnuté nad osou s vodiacou linkou (celé názvy) */
-  .os .tla-parts{margin-top:70px}
-  .os .tla-pseg{padding-left:5px}
-  .os .tla-pseg b{font-size:12.5px;line-height:22px}
-  .os .tla-pseg[data-n="Prvé dejstvo"] .l,.os .tla-pseg[data-n="Prológ"] .l,.os .tla-pseg[data-n="Tretie dejstvo"] .l,.os .tla-pseg[data-n="Epilóg"] .l{
-    display:inline!important;position:absolute;white-space:nowrap;line-height:20px;border-left:1px solid rgba(214,170,92,.45)}
-  .os .tla-pseg[data-n="Prvé dejstvo"] .l{left:-1px;top:-24px;height:46px;padding-left:5px}
-  .os .tla-pseg[data-n="Prológ"] .l{left:-1px;top:-46px;height:68px;padding-left:5px}
-  .os .tla-pseg[data-n="Tretie dejstvo"] .l{left:auto;right:100%;top:-24px;height:46px;padding:0 5px 0 0;border-left:0;border-right:1px solid rgba(214,170,92,.45);text-align:right}
-  .os .tla-pseg[data-n="Epilóg"] .l{left:auto;right:100%;top:-46px;height:68px;padding:0 5px 0 0;border-left:0;border-right:1px solid rgba(214,170,92,.45);text-align:right}
+.os .tla-pseg b.l{display:block!important;position:absolute;top:0;left:0;white-space:nowrap}
+@media (max-width:819px){
+  .os .tla-parts{height:54px;margin-top:4px;--pfs:12.5px;--tt:45px}
 }
