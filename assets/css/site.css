@@ -70,7 +70,7 @@ em{font-style:italic}
 
 /* lišta */
 .bar{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;gap:24px;padding:18px var(--gut);transition:background .6s var(--ease),padding .6s var(--ease)}
-.bar.is-solid{background:linear-gradient(180deg,rgba(5,4,5,.97) 0,rgba(5,4,5,.94) 62%,rgba(5,4,5,0));padding-top:12px;padding-bottom:26px}
+.bar.is-solid{background:#050405;border-bottom:1px solid rgba(214,170,92,.18);padding-top:12px;padding-bottom:14px}
 .mark{font-family:var(--disp);font-size:1.15rem;letter-spacing:-.01em;text-decoration:none;white-space:nowrap;color:var(--bone)}
 .mark em{color:var(--gold)}
 .chap{display:flex;gap:28px;margin-left:auto}
