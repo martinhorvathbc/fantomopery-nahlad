@@ -29,9 +29,10 @@
 
 /* pás „Kam patrí hudba“ – päť miest podľa Emy Olnerovej (10. 11. 2026): jeden stĺpec, dlhšie riadky s citátmi */
 .os .tla-mlist{grid-auto-flow:row;grid-template-columns:1fr;grid-template-rows:none;gap:6px 0;max-width:62rem}
-.os .tla-mlist li{padding-left:76px;font-size:17px}
+.os .tla-mlist li{padding-left:0;font-size:17px;line-height:1.4}
+.os .tla-mlist li em{font-style:italic;opacity:.92}
 .os .tla-mlist li b{font-weight:500}
-@media (max-width:860px){.os .tla-mlist li{padding-left:64px;font-size:16px}}
+@media (max-width:860px){.os .tla-mlist li{padding-left:0;font-size:16px}}
 
 /* hlavička osi – názvy častí (Martin 10. 11. 2026 5.05): všetkých päť popiskov na jednej základnej línii, rovnaké písmo, veľkosť a farba, bez vodiacich liniek
    (ostávajú len deliace čiarky dejstiev). Polohu popiskov počíta timeline.js (patch v os_build.py): Prológ na x=0, Prvé a Druhé dejstvo centrované v úseku,
