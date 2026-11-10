@@ -317,8 +317,10 @@
   gsap.set(".kr-row", { opacity: 0 });
 
   /* pás */
+  if (document.querySelector(".band")) {
   gsap.fromTo(".band .r1", { xPercent: 0 }, { xPercent: -30, ease: "none", scrollTrigger: { trigger: ".band", start: "top bottom", end: "bottom top", scrub: true } });
   gsap.fromTo(".band .r2", { xPercent: -30 }, { xPercent: 0, ease: "none", scrollTrigger: { trigger: ".band", start: "top bottom", end: "bottom top", scrub: true } });
+  }
 
   /* objednávka */
   gsap.fromTo(".offer-media", { yPercent: 0 }, { yPercent: 12, ease: "none", scrollTrigger: { trigger: ".offer", start: "top bottom", end: "bottom top", scrub: true } });

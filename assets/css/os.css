@@ -48,3 +48,6 @@
 @media (max-width:819px){
   .os .tla-parts{height:54px;margin-top:4px;--pfs:12.5px;--tt:45px}
 }
+
+/* kredit epilógu na mobile: každá dvojica (úloha a meno) na vlastnom riadku, aby sa „hudba“ nelepila na meno */
+@media (max-width:860px){.who .kr-pair{display:block;margin:.55em 0}}
