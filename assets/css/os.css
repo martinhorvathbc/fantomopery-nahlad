@@ -32,3 +32,26 @@
 .os .tla-mlist li{padding-left:76px;font-size:17px}
 .os .tla-mlist li b{font-weight:500}
 @media (max-width:860px){.os .tla-mlist li{padding-left:64px;font-size:16px}}
+
+/* hlavička osi – názvy častí (Martin 10. 11. 2026 4.59): rovnaká váha, veľkosť a základná línia; každý názov začína pri svojej deliacej čiarke.
+   Úzke časti (Prológ, Tretie dejstvo) majú celý názov nad osou s vodiacou linkou, nie skratku. */
+.os .tla-parts{margin-top:24px;overflow:visible}
+.os .tla-pseg{overflow:visible;padding-left:7px}
+.os .tla-pseg b{font-weight:500;font-size:15px;line-height:22px;letter-spacing:0;text-shadow:none!important}
+.os .tla-pseg.is-on b,.os .tla-pseg.is-now b{color:var(--t-gold2);text-shadow:none!important}
+.os .tla-pseg .l{display:inline!important}
+.os .tla-pseg .s{display:none!important}
+.os .tla-pseg.up .l,.os .tla-pseg.up2 .l{display:inline!important}
+.os .tla-pseg.up .l{position:absolute;left:-1px;top:-24px;height:46px;padding-left:7px;line-height:20px;border-left:1px solid rgba(214,170,92,.45);white-space:nowrap}
+@media (max-width:860px){
+  /* mobil: Druhé dejstvo v osi; Prvé dejstvo, Prológ, Tretie dejstvo a Epilóg zdvihnuté nad osou s vodiacou linkou (celé názvy) */
+  .os .tla-parts{margin-top:70px}
+  .os .tla-pseg{padding-left:5px}
+  .os .tla-pseg b{font-size:12.5px;line-height:22px}
+  .os .tla-pseg[data-n="Prvé dejstvo"] .l,.os .tla-pseg[data-n="Prológ"] .l,.os .tla-pseg[data-n="Tretie dejstvo"] .l,.os .tla-pseg[data-n="Epilóg"] .l{
+    display:inline!important;position:absolute;white-space:nowrap;line-height:20px;border-left:1px solid rgba(214,170,92,.45)}
+  .os .tla-pseg[data-n="Prvé dejstvo"] .l{left:-1px;top:-24px;height:46px;padding-left:5px}
+  .os .tla-pseg[data-n="Prológ"] .l{left:-1px;top:-46px;height:68px;padding-left:5px}
+  .os .tla-pseg[data-n="Tretie dejstvo"] .l{left:auto;right:100%;top:-24px;height:46px;padding:0 5px 0 0;border-left:0;border-right:1px solid rgba(214,170,92,.45);text-align:right}
+  .os .tla-pseg[data-n="Epilóg"] .l{left:auto;right:100%;top:-46px;height:68px;padding:0 5px 0 0;border-left:0;border-right:1px solid rgba(214,170,92,.45);text-align:right}
+}
